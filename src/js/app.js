@@ -1,69 +1,69 @@
-// TASK 1:Ədədlərdən ibarət bir array qəbul edən və bu ədədlərin ədədi ortasını tapan bir funksiya yazın //
+// 1.  Daxil olan ədədin kök altı dəyərin hesablayan funksiya yazın əgər daxil olan ədəddən tam kök çıxmırsa bunu consola mesaj olaraq yazdırın.
+//ex : kokHesabla(25)  output : 5
 
-let numArray = [5, 10, 15, 20, 25,30];
-console.log(numArray);
+// function kokHesabla(x) {
+//     let kok = Math.sqrt(x);
+//     if (Number.isInteger(kok)) {
+//         console.log("Kök altı dəyər: " + kok);
+//     } else {
+//         console.log("Ədədin tam kökü yoxdur.");
+//     }
+// }
 
-let sum = 0;
-let result = 0;
+// kokHesabla(25);
 
-function arrayItems(arrayItems) {
-  for (let i = 0; i <= arrayItems.length - 1; i++) {
-    sum += numArray[i];
-    result = Math.floor(sum / arrayItems.length);
-  }
-  console.log(`result:${result}`);
-}
-arrayItems(numArray);
+//2. Arqument olaraq string yazı qəbul edən funksiya yazın və həmən funksiya gələn string dəyərin içində neçə samit və neçə sait olduğunu hesablasın .
+//note: switch case ile yazın
+// function samitSaitHesabla(metin) {
+//   let samitler = "";
+//   let saitler = "";
+//   let space = " ";
 
-// ----------------------------------- TASK 1--------------------------------------//
+//   for (let i = 0; i <= metin.length - 1; i++) {
+//     switch (metin[i].toLowerCase()) {
+//       case "a":
+//         saitler += metin[i];
+//         break;
+//       case "e":
+//         saitler += metin[i];
+//         break;
+//       case "o":
+//         saitler += metin[i];
+//         break;
+//       case "u":
+//         saitler += metin[i];
+//         break;
+//       case "i":``
+//         saitler += metin[i];
+//         break;
 
-// 2. String qəbul edən və onu tərsinə yazan funksiya yazın, məsələn "salam" qəbul edir "malas" qaytarır
+//       default:
+//         if (metin[i] !== saitler && metin[i] !== space) {
+//           samitler += metin[i];
+//         }
+//         break;
+//     }
+//   }
 
-function reverseString (string) {
-  for (let i = string.length - 1; i >= 0; i--) {
-    console.log(string[i]);
-  }
-}
+//   console.log(
+//     `soz: ${metin} saitler:${saitler} saitlerin sayisi: ${saitler.length}`
+//   );
+//   console.log(
+//     `soz: ${metin} samitler:${samitler} samitlerin sayisi: ${samitler.length}`
+//   );
+// }
+// samitSaitHesabla("salam necesiz");
 
- reverseString("Qadir")
-// -------------------------------------------------- TASK 2 --------------------------------//
+//3. Arryin elementlərini string-ə çevirib birləşdirən bir funksiya yazın.
+//ex: let arr = [1, "test", 8, "any text"]  output : "1test8any text"
 
-//  3. Ədədin faktorialını hesablayan funksiya yazın
-const faktorial = (n) => {
-  if (n === 0 || n === 1) {
-    return 1;
-  } else {
-    return n * faktorial(n-1);
-  }
-};
-let faktorail = faktorial(56);
-console.log(faktorail);
-// // ---------------------------------- TASK 3 ----------------------------------------//
+// let arr = [1, "ve", 7, "tek ededdir"];
 
-// 4. Sözlərdən ibarət array qəbul edən və bu sözlərdən uzununu tapan funksiya yazın, məsələn ["apple", "orange","strawberry"] qəbul edir "strawberry"  qaytarır
-
-let arr = ["blue", "orange", "purpple", "lightgreen"];
-let largestElement = arr[0];
-
-function findElement(arr) {
-  for (let i = 1; i <= arr.length - 1; i++) {
-    if (arr[i].length > largestElement.length) {
-      largestElement = arr[i];
-    }
-  }
-  console.log(`largestElement is: ${largestElement}`);
-}
-
-findElement(arr);
-
-// --------------------------- TASK 4 ------------------------------//
-
-// 5. Verilən ədədin rəqəmləri cəmini hesablayan funksiya yazın*/
-
-function num(value1, value2) {
-  console.log(value1 + value2);
-}
-
-num(9, 5);
-
-// ---------------------------------- TASK 5 -------------------------------------//
+// function joinFunction(arr) {
+//   let string = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     string += arr[i];
+//   }
+//   console.log(string);
+// }
+// joinFunction(arr);
